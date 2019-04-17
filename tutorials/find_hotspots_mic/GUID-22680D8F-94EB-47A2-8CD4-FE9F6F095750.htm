@@ -1,0 +1,358 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Build Application">
+<meta name="DC.Relation" scheme="URI" content="GUID-4A555FCA-2EAD-4D6B-9AAB-62C99BD9EE1C.htm">
+<meta name="prodname" content="VTune Amplifier">
+<meta name="version" content="2016">
+<meta name="series" content="Intel&reg; VTune&#8482; Amplifier 2016">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-22680D8F-94EB-47A2-8CD4-FE9F6F095750">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Build Application</title>
+<script src="resources/prism/prism.js"><!----></script>
+<link href="resources/prism/prism.css" rel="stylesheet">
+</head>
+<body id="GUID-22680D8F-94EB-47A2-8CD4-FE9F6F095750">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; VTune&#8482; Amplifier 2016</em></p>
+
+
+ 
+  <h1 class="topictitle1">Build Application </h1>
+ 
+  <div id="GUID-73D427BC-CCB5-4997-AFA9-FE6BC418096D"> 
+    <p id="GUID-3DE6CA0C-3A46-4F8A-9D95-9192201C716D"> 
+    </p>
+ 
+    <p id="GUID-4AB28665-0BBE-4108-8050-DE9F375D5A72"> 
+      <img src="GUID-02914B5D-1A7D-4B4B-8A24-9534BDA714E4-low.gif"> Before you start identifying hotspots in your native Intel&reg; Xeon
+      Phi&#8482; coprocessor application, do the following: 
+    </p>
+ 
+    <ol id="GUID-A50451E7-FF92-47AD-884A-C7C3A6F9126D"> 
+      <li> 
+        <p><a href="#GET_SOFT_TOOLS">Get
+            software tools</a>. 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p><a href="#BUILD">Build
+            application with full optimizations on the host</a>. 
+        </p>
+ 
+      </li>
+ 
+      <li> 
+        <p><a href="#SCRIPT">Create
+            a performance baseline</a>. 
+        </p>
+ 
+      </li>
+ 
+    </ol>
+ 
+    <div class="section" id="GET_SOFT_TOOLS"><a name="GET_SOFT_TOOLS"><!-- --></a><h2 class="sectiontitle">Get Software Tools</h2> 
+       
+      <p>You need the following tools to try these tutorial steps yourself
+        using the 
+        <samp class="codeph">matrix</samp> sample application: 
+      </p>
+ 
+      <p> 
+      <ul id="GUID-1E9D5DC1-C300-45E8-BD81-9CCF4E217905"> 
+        <li> 
+          <p>Intel&reg; VTune&#8482; Amplifier,
+            including sample applications 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Sampling driver, set up during the VTune Amplifier installation 
+          </p>
+ 
+          <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+            <p>If, for some reason, the VTune Amplifier was not able to install
+              the driver, you will not be able to run the analysis and will see a warning
+              message. See online help for additional instructions how to install the driver
+              manually. 
+            </p>
+ 
+          </div> 
+        </li>
+ 
+        <li> 
+          <p>Intel&reg; Manycore Platform Software Stack (Intel&reg; MPSS). See Release
+            Notes for more information. 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p><samp class="codeph">zip</samp> file extraction utility 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Intel&reg; C++ Compiler installed on the host. See Release Notes for
+            more information. 
+          </p>
+ 
+        </li>
+ 
+      </ul>
+ 
+      </p>
+ 
+      <p><strong>Acquire Intel VTune Amplifier</strong> 
+      </p>
+ 
+      <p>If you do not already have access to the VTune Amplifier, you can
+        download an evaluation copy from 
+        <a href="HTTP://SOFTWARE.INTEL.COM/EN-US/ARTICLES/INTEL-SOFTWARE-EVALUATION-CENTER/" target="_blank">http://software.intel.com/en-us/articles/intel-software-evaluation-center/</a>.
+        
+      </p>
+ 
+      <p><strong> Install and Set Up VTune Amplifier Sample Applications 
+        </strong> 
+      </p>
+ 
+      <p> 
+      <ol id="GUID-31ED23B9-995D-4B7F-81C6-001CBA03BF52"> 
+        <li> Copy the 
+          <samp class="codeph">matrix_vtune_amp_xe.zip</samp> file from
+          the 
+          <samp class="codeph">
+            &lt;install-dir&gt;\samples\&lt;locale&gt;\C++\</samp> directory to a
+          writable directory or share on your system. The default installation path is 
+          <samp class="codeph">C:\Program Files(x86)\IntelSWTools\VTune
+            Amplifier XE 
+            <em>version</em>\</samp> (on
+            certain systems, instead of 
+            <samp class="codeph">Program Files(x86)</samp> the directory name is 
+            <samp class="codeph">Program Files</samp>). 
+        </li>
+ 
+        <li> 
+          <p>Extract the sample from the 
+            <samp class="codeph">.zip</samp> file. 
+          </p>
+ 
+        </li>
+ 
+      </ol>
+ 
+      </p>
+ 
+      <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+        <ul id="GUID-1E95CD3F-9A7F-481C-92DB-41C03EF2D97C"> 
+          <li>Samples are non-deterministic. Your screens may vary from the
+            screen captures shown throughout this tutorial. 
+          </li>
+ 
+          <li>Samples are designed only to illustrate the VTune Amplifier
+            features; they do not represent best practices for creating code. 
+          </li>
+ 
+        </ul>
+ 
+      </div> 
+    </div>
+ 
+    <div class="section" id="BUILD"><a name="BUILD"><!-- --></a><h2 class="sectiontitle">Build the Target </h2> 
+       
+      <p><strong>Prerequisite</strong>: When using an
+        offload or cross compiler, make sure to manually install binary utilities
+        (Binutils) included into the Intel Xeon Phi installation zip file package. For
+        installation instructions, please refer to the Intel C++ Compiler
+        documentation. 
+      </p>
+ 
+      <p>Build the target on the host with full optimizations, which is
+        recommended for performance analysis. 
+        For native application analysis
+          used in this tutorial, you need to copy the binary to the Intel Xeon Phi
+          coprocessor. For offload applications, no copying is required. 
+      </p>
+ 
+      <p>To communicate with the Intel Xeon
+        Phi coprocessor cards, you may use any of the following mechanisms: 
+      </p>
+ 
+      <ul id="GUID-751EA72D-11A7-45EC-A4B7-63E410D24767"> 
+        <li>Mount an NFS share. See the 
+          <em>NFS Mounting a Host Export</em> topic in the Intel Manycore
+          Platform Software Stack help for details. 
+        </li>
+ 
+        <li>Use existing SSH tools. 
+        </li>
+ 
+      </ul>
+ 
+      <p>This sample uses the PuTTy*
+          utility and assumes that ordinary user account access has not yet been
+          established on the coprocessor (thus the references to "root"). See the Intel
+          MPSS installation document for details on creating user accounts on the
+          coprocessor. 
+         
+      </p>
+ 
+      <ol id="GUID-506771BD-013C-49CC-BD32-E34897B3B6FB"> 
+        <li> 
+          <p>From the 
+            <strong>Start</strong> menu, select 
+            <strong>All Programs &gt; Intel Parallel Studio XE 
+              <em>version</em> &gt; Command Prompt &gt; Parallel Studio XE with
+              Intel Compiler XE</strong> and select a mode that corresponds to your system and
+            version of the Microsoft* Visual Studio IDE installed, for example:<strong> Intel 64
+              Visual Studio 2012 mode</strong>. 
+          </p>
+ 
+          <p>This command sets up the Intel C++ Compiler environment variables
+            and opens a command prompt. 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Change the directory to the location where you extracted the
+            sample code (for this example, assume that location is 
+            <span class="filepath">C:\samples\matrix\windows_mic</span>). 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Build the sample code with the Intel C++ Compiler, copy the 
+            <samp class="codeph">matrix.mic</samp> file to the card via the 
+            <samp class="codeph">pscp</samp> command and set the execution permissions via
+            
+            <samp class="codeph">plink</samp>. 
+          </p>
+ 
+          <p>For automation, run the 
+            <samp class="codeph">buildmatrix.bat</samp> script file including all these
+            commands. 
+          </p>
+ 
+          <p> 
+            <pre>icl /Qmic -lpthread -g -O3 -debug inline-debug-info -vec-report3 -o matrix.mic ..\src\matrix.mic  ..\src\matrix.c ..\src\multiply.c ..\src\util.c -D_LINUX</pre> 
+            <pre>pscp -l root -i &lt;<em>path_to_private_key_file</em>&gt;  C:\samples\matrix\windows_mic\matrix.mic &lt;<em>target_system</em>&gt;:/tmp
+</pre> 
+            <pre>plink -l root -i &lt;<em>path_to_private_key_file</em>&gt; root@&lt;<em>target_system</em>&gt;  chmod "+x" /tmp/matrix.mic</pre> 
+          </p>
+ 
+          <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+            <p>Edit the 
+              <samp class="codeph">buildmatrix.bat</samp> file to add a path to the
+              private key file on your system. 
+            </p>
+ 
+          </div> 
+          <p> The 
+            <samp class="codeph">matrix</samp> application is built as 
+            <samp class="codeph">matrix.mic</samp> and copied to the 
+            <span class="filepath">/tmp</span> directory on the selected card. 
+          </p>
+ 
+        </li>
+ 
+      </ol>
+ 
+      </div>
+ 
+    <div class="section" id="SCRIPT"><a name="SCRIPT"><!-- --></a><h2 class="sectiontitle">Create a Performance Baseline </h2> 
+       
+      <ol id="GUID-603D238E-620B-4EBF-B14A-9C60116B690B"> 
+        <li> 
+          <p>Run the application on the coprocessor using 
+             
+              <samp class="codeph">plink</samp> and record the results to establish a
+            performance baseline: 
+          </p>
+ 
+          <pre>plink -l root -i &lt;<em>path_to_private_key_file</em>&gt; root@&lt;<em>target_system</em>&gt;  /tmp/matrix.mic</pre> 
+          <p>In this tutorial's scenario, the
+            command running the 
+            <samp class="codeph">matrix</samp> application is added to the 
+            <samp class="codeph">runmatrix.bat</samp>. Edit this 
+            <samp class="codeph">bat</samp> file to add a path to the private key file on
+            your system. 
+          </p>
+ 
+          <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+            <p>Before you start the application, minimize the amount of other
+              software running on your computer to get more accurate results. 
+            </p>
+ 
+          </div> 
+          <p><img src="GUID-FBD6FBEA-7BDF-4731-9C87-438F91628C75-low.gif"> 
+          </p>
+ 
+        </li>
+ 
+        <li> 
+          <p>Note the execution time displayed at the bottom. For the 
+            <samp class="codeph">matrix.mic</samp> executable in the figure above, the
+            execution time is 
+            24.988 seconds. Use this metric as a
+            baseline against which you will compare subsequent runs of the application. 
+          </p>
+ 
+          <div class="Note"><h3 class="NoteTipHead">Note</h3> 
+            <p>Run the application several times, noting the execution time for
+              each run, and use the average time. This helps to minimize skewed results due
+              to transient system activity. 
+            </p>
+ 
+          </div> 
+        </li>
+ 
+      </ol>
+ 
+      </div>
+ 
+    <div class="section" id="GUID-2F6ACADF-6121-413E-A07F-FC70A85EC2DA"><h2 class="sectiontitle">Key Terms </h2> 
+       
+      <ul id="GUID-FA4439CD-111F-42B5-9885-E8B92C795B80"> 
+        <li> 
+          <p><a href="GUID-936F0115-97D4-484C-8778-CFDEC6096945.htm#TARGET">Target</a>
+            
+          </p>
+ 
+        </li>
+ 
+      </ul>
+ 
+    </div>
+ 
+    <div class="section" id="GUID-797E25B7-6155-4C22-9C96-A7FD494B5D6C"><h2 class="sectiontitle">Next Step</h2> 
+       
+      <p><a href="GUID-5C2B4F86-B210-4693-AA73-1CE6E45A44FA.htm">Create Project
+          and Configure Target</a> 
+      </p>
+ 
+    </div>
+ 
+  </div>
+ 
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-4A555FCA-2EAD-4D6B-9AAB-62C99BD9EE1C.htm">Finding Hotspots</a></div>
+</div>
+<div></div>
+
+</body>
+</html>

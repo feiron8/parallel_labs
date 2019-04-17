@@ -1,0 +1,181 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Overview">
+<meta name="DC.Relation" scheme="URI" content="GUID-703EC099-0C5C-4505-83DC-BF1854BFED41.htm">
+<meta name="prodname" content="VTune Amplifier">
+<meta name="version" content="2016">
+<meta name="series" content="Intel&reg; VTune&#8482; Amplifier">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-5E66DCAD-A9B0-4373-B90D-FC1D0FD1E7D2">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Overview</title>
+<script src="resources/prism/prism.js"><!----></script>
+<link href="resources/prism/prism.css" rel="stylesheet">
+</head>
+<body id="GUID-5E66DCAD-A9B0-4373-B90D-FC1D0FD1E7D2">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; VTune&#8482; Amplifier 
+</em></p>
+
+
+ 
+  <h1 class="topictitle1">Overview</h1>
+ 
+  <div> 
+	 <p><a name="IMAGE_3BA408366A7A4308863EDD89723D4E6B"><!-- --></a><img id="IMAGE_3BA408366A7A4308863EDD89723D4E6B" src="GUID-02914B5D-1A7D-4B4B-8A24-9534BDA714E4-low.gif" width="32" height="32"> Discover how to use General Exploration analysis of the 
+		Intel&reg; VTune&#8482; Amplifier to identify hardware-related issues in your application such as data sharing, cache misses, branch misprediction, and others. 
+	 </p>
+ 
+	 
+<div class="tablenoborder"><table cellpadding="4" summary="" id="GUID-90830C46-08BF-4A95-A9F9-2465BA185207" frame="border" border="1" cellspacing="0" rules="all"> 
+		  <tbody> 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="16.722408026755854%"> 
+				  <p><strong>About This Tutorial</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="83.27759197324414%"> 
+				  <p>This tutorial uses the sample 
+					 <samp class="codeph">matrix</samp> application and guides you through basic steps required to analyze the code for general hardware issues on the Intel&reg; microarchitecture code name Nehalem. 
+				  </p>
+ 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="16.722408026755854%"> 
+				  <p><strong>Estimated Duration</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="83.27759197324414%"> 
+				  <p>10-15 minutes. 
+				  </p>
+ 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="16.722408026755854%"> 
+				  <p><strong>Learning Objectives</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="83.27759197324414%"> 
+				  <p>After you complete this tutorial, you should be able to: 
+				  <ul id="GUID-211B4EDC-3D3C-4E43-822F-8C4719BE529B"> 
+					 <li id="LI_A72284ACDBA1424588347E6AA40D0796"><a name="LI_A72284ACDBA1424588347E6AA40D0796"><!-- --></a> 
+						<p>Choose an analysis target. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_6E021BCB1FD24C51971D12081C727A6C"><a name="LI_6E021BCB1FD24C51971D12081C727A6C"><!-- --></a> 
+						<p> Run the General Exploration analysis. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_0800AEB424B44AEEA9A8030CBDF01360"><a name="LI_0800AEB424B44AEEA9A8030CBDF01360"><!-- --></a> 
+						<p>Understand the event-based performance metrics. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_DA8E768CF7FD42459F4280573CEE5470"><a name="LI_DA8E768CF7FD42459F4280573CEE5470"><!-- --></a> 
+						<p>Identify the most critical hardware issues for the application as a whole. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_2D0EA1E0FA17432FBD5C38568536EB43"><a name="LI_2D0EA1E0FA17432FBD5C38568536EB43"><!-- --></a> 
+						<p>Identify the modules/functions that caused the most critical hardware issues. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_FDE1E4BDF5934F9C8CCB794D7C365CA8"><a name="LI_FDE1E4BDF5934F9C8CCB794D7C365CA8"><!-- --></a> 
+						<p> Analyze the source code to locate the most critical code lines. 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_8A775EE9E9E84DBE9E1F15D0F981E0F2"><a name="LI_8A775EE9E9E84DBE9E1F15D0F981E0F2"><!-- --></a> 
+						<p>Identify the next steps in performance analysis. 
+						</p>
+ 
+					 </li>
+ 
+				  </ul>
+ 
+				  </p>
+ 
+				</td>
+ 
+			 </tr>
+ 
+			 <tr> 
+				<td class="cellrowborder" valign="top" width="16.722408026755854%"> 
+				  <p><strong>More Resources</strong> 
+				  </p>
+ 
+				</td>
+ 
+				<td class="cellrowborder" valign="top" width="83.27759197324414%"> 
+				  <ul id="GUID-2C08DE64-1453-4243-97AD-836C88A3D602"> 
+					 <li id="LI_540E7235CD18437B84D5739E407B90A4"><a name="LI_540E7235CD18437B84D5739E407B90A4"><!-- --></a> 
+						<p>Intel&reg; VTune Amplifier tutorials (HTML, PDF): 
+						  <a href="https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials" target="_blank">https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials</a> 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_727488D68FA04450AB46A5600B145188"><a name="LI_727488D68FA04450AB46A5600B145188"><!-- --></a> 
+						<p>Intel&reg; VTune&#8482; Amplifier support page: 
+						  <a href="https://software.intel.com/en-us/intel-vtune-amplifier-xe" target="_blank">https://software.intel.com/en-us/intel-vtune-amplifier-xe</a> 
+						</p>
+ 
+					 </li>
+ 
+					 <li id="LI_BB2DF0FF6596455294B1F32BD36148CD"><a name="LI_BB2DF0FF6596455294B1F32BD36148CD"><!-- --></a> 
+						<p>Processor-specific Tuning guides and performance analysis papers: 
+						  <a href="https://software.intel.com/en-us/articles/processor-specific-performance-analysis-papers" target="_blank">https://software.intel.com/en-us/articles/processor-specific-performance-analysis-papers</a> 
+						</p>
+ 
+					 </li>
+ 
+				  </ul>
+ 
+				</td>
+ 
+			 </tr>
+ 
+		  </tbody>
+ 
+		</table>
+</div>
+ 
+	 </div>
+ 
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-703EC099-0C5C-4505-83DC-BF1854BFED41.htm">Tutorial: Identifying Hardware Issues</a></div>
+</div>
+<div></div>
+
+</body>
+</html>

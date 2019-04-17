@@ -1,0 +1,440 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Navigation Quick Start">
+<meta name="DC.Relation" scheme="URI" content="GUID-3829260C-A250-4344-AB0A-1029CCAC9A16.htm">
+<meta name="DC.Relation" scheme="URI" content="https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials/">
+<meta name="prodname" content="VTune Amplifier">
+<meta name="version" content="2016">
+<meta name="series" content="Intel&reg; VTune&#8482; Amplifier 2016">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-1253EFC0-D130-4055-8BBE-A89036339F99">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Navigation Quick Start</title>
+<script src="resources/prism/prism.js"><!----></script>
+<xml>
+<MSHelp:Attr Name="DocSet" Value="Intel"></MSHelp:Attr>
+<MSHelp:Attr Name="Locale" Value="kbEnglish"></MSHelp:Attr>
+<MSHelp:Attr Name="TopicType" Value="kbReference"></MSHelp:Attr>
+<MSHelp:Keyword Index="F" Term="Context-id"></MSHelp:Keyword>
+</xml>
+<link href="resources/prism/prism.css" rel="stylesheet">
+</head>
+<body id="GUID-1253EFC0-D130-4055-8BBE-A89036339F99">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; VTune&#8482; Amplifier 2016</em></p>
+
+
+ 
+  <h1 class="topictitle1">Navigation Quick Start</h1>
+ 
+   
+  <div> 
+	 <div class="section" id="GUID-54A5B4E8-3B9E-4594-B580-B28692715381"> 
+		<p> 
+		  <img src="GUID-02914B5D-1A7D-4B4B-8A24-9534BDA714E4-low.gif"> 
+		  Intel&reg; VTune&#8482; Amplifier
+		  provides information on code performance for users developing serial and
+		  multithreaded applications on Windows*, Linux*, and OS X* operating systems.
+		  VTune Amplifier helps you analyze algorithm choices and identify where and how
+		  your application can benefit from available hardware resources. 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="GUID-96710D8E-B283-4761-983C-B7BC45E671BD"><h2 class="sectiontitle">VTune Amplifier Access</h2> 
+		 
+		<p>To access the VTune Amplifier in the
+		  Visual Studio* IDE: From the Windows* 
+		  <strong>Start</strong> menu, choose 
+		  <strong>Intel Parallel Studio XE 
+			 <em>version</em></strong> &gt; 
+		  <strong>Parallel Studio XE 
+			 <em>version</em> with [VS2012 | VS2013 | VS2015]</strong>. 
+		</p>
+ 
+		<p>To access the Standalone VTune
+		  Amplifier GUI, do one of the following: 
+		</p>
+ 
+		<p> 
+		<ul id="GUID-0CE64176-DE33-4898-ABDF-8229E21CDF01"> 
+		  <li> 
+			 <p>From the Windows* 
+				<strong>Start</strong> menu, choose 
+				<strong>Intel Parallel Studio XE 
+				  <em>version</em></strong> &gt; 
+				<strong>Intel VTune Amplifier XE 
+				  <em>version</em></strong>. 
+			 </p>
+ 
+		  </li>
+ 
+		  <li> 
+			 <p>From the Windows* 
+				<strong>Start</strong> menu, choose 
+				<strong>Intel Parallel Studio XE 
+				  <em>version</em></strong> &gt; 
+				<strong>Command Prompt</strong> &gt; 
+				<strong>Parallel Studio XE</strong> &gt; 
+				<strong>IA-32 Visual Studio [2012 | 2013 | 2015] mode</strong> to set your
+				environment, then type 
+				<samp class="codeph">amplxe-gui</samp>. You can also set the environment
+				manually by running the 
+				<samp class="codeph">&lt;<em>install-dir</em>&gt;\amplxe-vars.bat</samp> file. 
+			 </p>
+ 
+		  </li>
+ 
+		</ul>
+ 
+		</p>
+ 
+		</div>
+ 
+	 <div class="section" id="GUID-2DC21B17-83C4-4A6C-BB44-A74CD6127B90"><h2 class="sectiontitle">VTune Amplifier/Visual Studio* IDE Integration</h2> 
+		 
+		<img src="GUID-105FA066-A743-4D7F-B4AA-1A459B0EDC8F-low.gif">
+		
+		 
+		<p id="GUID-5D81FC81-66A5-4815-8FAA-43FC7B684E86"> 
+		
+<div class="tablenoborder"><table cellpadding="4" summary="" id="GUID-C9624240-8D26-4213-B5A6-3B8D620EC9C2" width="100%" frame="void" border="0" rules="none" cellspacing="2"> 
+			  
+			  
+			 <tbody> 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_A"><a name="IMAGE1_A"><!-- --></a> 
+						<img src="GUID-4247844E-FB32-4AA0-B2D9-4D40972AC2B3-low.jpg" width="22" height="22" alt="Callout A"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-56DFBCFD-1E69-47CF-8B30-0477E36B5053">Use the VTune Amplifier toolbar
+						to configure and control result collection. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_B"><a name="IMAGE1_B"><!-- --></a> 
+						<img src="GUID-BCE1DA0A-3ADC-404C-8BFD-1B3F8B67D64A-low.jpg" width="22" height="22" alt="Callout B"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-F9815DB9-FCA7-4553-A4AE-3C62891C597D"> VTune
+						Amplifier results 
+						<samp class="codeph" id="GUID-96F66B6F-D26E-4A92-87C8-38D58979BC7C">*.amplxe</samp> show up in the
+						
+						<b class="uicontrol" id="GUID-EFB67E91-BCB2-4C31-B16C-FB1B1EFD1065">Solution Explorer</b>
+						under the 
+						<strong id="GUID-FE64ED45-91DA-4671-9522-9547ED2F9E3E">Amplifier
+						  XE Results</strong> folder. To configure and control result collection, right-click
+						the project in the 
+						<b class="uicontrol" id="GUID-5271A171-1969-4923-87AB-41537B8EEAE8">Solution Explorer</b>
+						and select the 
+						<strong id="GUID-B2A2292A-38D1-4289-9D31-E10E0590531C">Intel VTune
+						  Amplifier XE 
+						  <em>version</em></strong> menu from the pop-up menu. To manage
+						previously collected results, right-click the result (for example, 
+						<samp class="codeph" id="GUID-5BABA7E6-E41E-4DB2-9361-087E560E3BDE">r000hs.amplxe</samp>) and
+						select the required command from the pop-up menu. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="GUID-C9504B6F-36FE-4CC7-BEB7-616E2C9BFE11"> 
+						<img src="GUID-A766557E-C528-44AE-82BB-BBBA16D92BDA-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-ADD16F33-41FC-4FB6-99F7-ED14673C2722">Click the 
+						<strong>(<u>change</u>)</strong> link to select a 
+						<em id="GUID-8FAB367F-08FA-4FB8-B1F7-23944B2A368A">viewpoint</em>, a preset
+						configuration of windows/panes for an analysis result. For each analysis type,
+						you can switch among several viewpoints to focus on particular performance
+						metrics. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_D"><a name="IMAGE1_D"><!-- --></a> 
+						<img src="GUID-5BA24D82-9B9D-438B-B476-A5A50E83367E-low.jpg" width="22" height="22" alt="Callout D"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-D7B76EF8-41E7-4A52-93B6-BA2A37ECDE62">Click the
+						buttons on navigation toolbars to change window views and toggle window panes
+						on and off. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_E"><a name="IMAGE1_E"><!-- --></a> 
+						<img src="GUID-85949B52-3ABE-4B0D-8B4B-BCAF60C404F3-low.jpg" width="22" height="22" alt="Callout E"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-E8A093BA-9DD0-45E6-81EA-EEC58C3AD4A0">In the 
+						<strong>Timeline</strong> pane, analyze the thread activity and
+						transitions presented for the user-mode sampling and tracing analysis results
+						(for example, Basic Hotspots, Concurrency, Locks and Waits) or analyze the
+						distribution of the application performance per metric over time for the
+						event-based sampling analysis results (for example, Memory Access). 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_F"><a name="IMAGE1_F"><!-- --></a> 
+						<img src="GUID-D9203FC0-7C95-40E0-A607-DD8C2FAC4A87-low.jpg" width="22" height="22" alt="Callout F"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-D7F159E5-DCCA-4844-A14E-4983D26EC961">Use the 
+						<strong>Call Stack</strong> pane to view call paths for a function
+						selected in the grid. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="10%"> 
+					 <p id="IMAGE1_G"><a name="IMAGE1_G"><!-- --></a> 
+						<img src="GUID-092E2B62-7C81-410C-93F2-6690053138A2-low.jpg" width="22" height="22" alt="Callout G"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="90%"> 
+					 <p id="GUID-9D7D1D2D-5B77-4C69-9F79-BF86BBBA21FA">Use the filter toolbar to filter
+						out the result data according to the selected categories. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+			 </tbody>
+ 
+		  </table>
+</div>
+ 
+		</p>
+ 
+	 </div>
+ 
+	 <div class="section" id="GUID-9BE53600-25EB-49B9-9AC6-A6EA7F4A366C"><h2 class="sectiontitle"> 
+		  Standalone VTune Amplifier
+		  GUI</h2> 
+		 
+		<p> 
+		   
+		  <img src="GUID-B7F2766C-B929-4469-9431-7BB94D2018F6-low.gif">
+		  
+		   
+		</p>
+ 
+		<p id="GUID-B9497B1C-948F-4B27-ACFF-CD96942B0B70"> 
+		
+<div class="tablenoborder"><table cellpadding="4" summary="" id="GUID-8CC4A0C8-3053-4EA6-84B2-621D6219D7CF" frame="void" border="0" rules="none" cellspacing="2"> 
+			  
+			  
+			 <tbody> 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-EB87563D-C3A5-4BA2-829F-8FB7B44729EA"> 
+						<img src="GUID-4247844E-FB32-4AA0-B2D9-4D40972AC2B3-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p> Configure and manage projects and results, and launch new
+						analyses from the primary toolbar. Click the 
+						<strong>Configure Project</strong> button on this toolbar and use the 
+						<strong>Analysis Target</strong> tab to manage result file locations.
+						Newly completed and opened analysis results along with result comparisons
+						appear in the results tab for easy navigation. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-DB427E8C-EE75-402F-930B-BAF39A137776"> 
+						<img src="GUID-BCE1DA0A-3ADC-404C-8BFD-1B3F8B67D64A-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p id="GUID-655D9801-8ABE-4F65-8E27-898356DFE8EC">Use the VTune
+						Amplifier menu to control result collection, define and view project
+						properties, and set various options. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-9A0AA7AB-F7EB-4FAD-9E72-02BE4BDB5995"> 
+						<img src="GUID-A766557E-C528-44AE-82BB-BBBA16D92BDA-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p>The 
+						<strong>Project Navigator</strong> provides an iconic representation of
+						your projects and analysis results. Click the 
+						<strong>Project Navigator</strong> button on the toolbar to
+						enable/disable the 
+						<strong>Project Navigator</strong>. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-7295A2EA-AD4D-447E-AC3F-CF807CC60258"> 
+						<img src="GUID-5BA24D82-9B9D-438B-B476-A5A50E83367E-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p id="GUID-5BDD7BD9-BE68-4174-8C9E-24B9669C2128">Click the 
+						<strong>(<u>change</u>)</strong> link to select a 
+						<em id="GUID-921EBC30-B08A-4C40-AC4F-C21F85CE950B">viewpoint</em>, a preset
+						configuration of windows/panes for an analysis result. For each analysis type,
+						you can switch among several viewpoints to focus on particular performance
+						metrics. Click the yellow question mark icon to read the viewpoint description.
+						
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-D5BF55CD-C248-4DFD-BE32-073770D171DB"> 
+						<img src="GUID-85949B52-3ABE-4B0D-8B4B-BCAF60C404F3-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p id="GUID-6B694C88-7785-46F2-9972-572B012ED1BD">Switch
+						between window tabs to explore the analysis type configuration options and
+						collected data provided by the selected viewpoint. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-985E1FEA-CBA3-42CB-A277-78DF03CCED49"> 
+						<img src="GUID-D9203FC0-7C95-40E0-A607-DD8C2FAC4A87-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p id="GUID-1355B810-E8A2-46D1-B9A5-9CCBC767539D">Use the 
+						<b class="uicontrol" id="GUID-372840EE-C292-4D41-9D6A-02B4B23914CD">Grouping</b> drop-down
+						menu to choose a granularity level for grouping data in the grid. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+				<tr> 
+				  <td class="noborder" valign="top" width="11.061946902654867%"> 
+					 <p id="GUID-E23F43E9-0057-447D-977B-4C634FF7F7D5"> 
+						<img src="GUID-092E2B62-7C81-410C-93F2-6690053138A2-low.jpg" width="22" height="22"> 
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="noborder" valign="top" width="88.93805309734513%"> 
+					 <p id="GUID-2B6747B2-20FD-4313-9F54-6D27C19E4F0D">Use the filter toolbar to filter
+						out the result data according to the selected categories. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+			 </tbody>
+ 
+		  </table>
+</div>
+ 
+		</p>
+ 
+	 </div>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-3829260C-A250-4344-AB0A-1029CCAC9A16.htm">Tutorial: Finding Hotspots on the Intel&reg; Xeon Phi&#8482; Coprocessor - C++ Sample Code</a></div>
+</div>
+<div><h2>See Also</h2>
+<div class="linklist">
+<div><a href="https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials/" target="_blank">Click here for more Getting Started
+			 Tutorials 
+		  </a></div></div></div> 
+
+</body>
+</html>

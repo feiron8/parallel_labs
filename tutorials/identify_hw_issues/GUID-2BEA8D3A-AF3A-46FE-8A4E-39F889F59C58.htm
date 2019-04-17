@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:MSHelp="http://www.microsoft.com/MSHelp/" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="DC.Type" content="topic">
+<meta name="DC.Title" content="Key Terms">
+<meta name="DC.Relation" scheme="URI" content="GUID-703EC099-0C5C-4505-83DC-BF1854BFED41.htm">
+<meta name="DC.Relation" scheme="URI" content="https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials">
+<meta name="prodname" content="VTune Amplifier">
+<meta name="version" content="2016">
+<meta name="series" content="Intel&reg; VTune&#8482; Amplifier">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="GUID-2BEA8D3A-AF3A-46FE-8A4E-39F889F59C58">
+<meta name="DC.Language" content="en-US">
+<link rel="stylesheet" type="text/css" href="intel_css_styles.css">
+<title>Key Terms</title>
+<script src="resources/prism/prism.js"><!----></script>
+<link href="resources/prism/prism.css" rel="stylesheet">
+</head>
+<body id="GUID-2BEA8D3A-AF3A-46FE-8A4E-39F889F59C58">
+ <!-- ==============(Start:NavScript)================= -->
+ <script src="NavScript.js" language="JavaScript1.2" type="text/javascript"></script>
+ <script language="JavaScript1.2" type="text/javascript">WriteNavLink(0);</script>
+ <!-- ==============(End:NavScript)================= -->
+<p id="header_text" style="margin-bottom : 20pt"><em>Intel&reg; VTune&#8482; Amplifier 
+</em></p>
+
+
+ 
+  <h1 class="topictitle1">Key Terms</h1>
+ 
+  <div> 
+	 <p id="GUID-C32F6EB6-C51C-4DF5-ABC2-93A3C043F448"> 
+		<img src="GUID-02914B5D-1A7D-4B4B-8A24-9534BDA714E4-low.gif"> 
+	 </p>
+ 
+	 <p id="BASELINE"><a name="BASELINE"><!-- --></a> 
+		<strong id="GUID-C8414FE0-9872-47D6-BB6D-8F0AFA40951F">baseline</strong>: 
+		A performance metric used as a basis for comparison
+          of the application versions before and after optimization. Baseline should be
+          measurable and reproducible. 
+	 </p>
+ 
+	 <p id="ELAPSED_TIME"><a name="ELAPSED_TIME"><!-- --></a> 
+		<strong id="GUID-ADFC3A88-1880-4C9C-A6B5-90463CDDB238">Elapsed time</strong>:The total time your target ran, calculated as
+          follows: 
+          <strong id="d16e106"><a name="d16e106"><!-- --></a>Wall clock time at
+            end of application – Wall clock time at start of application</strong>. 
+         
+	 </p>
+ 
+	 <p id="EBS_METRICS"><a name="EBS_METRICS"><!-- --></a><strong>event-based metrics</strong>: Event ratios with their own threshold values. VTune Amplifier collects event data, calculates the ratios, and provides the results in the corresponding columns of the 
+		<strong>Bottom-up</strong>/<strong>Top-down Tree</strong> windows and in the 
+		<strong>Summary</strong> window. As soon as the performance of a program unit per metric exceeds the threshold, the VTune Amplifier marks this value as a performance issue (in pink) and provides recommendations how to fix it. For the full list of metrics used by the VTune Amplifier, see the 
+		<em>Reference &gt; CPU Metrics</em> topic in the online help. 
+	 </p>
+ 
+	 <p id="EVENT_SKID"><a name="EVENT_SKID"><!-- --></a><strong>event skid</strong>: An event detected not exactly on the code line that caused the event. Event skids may even result in a caller function event being recorded in the callee function. See the online help for more details. 
+	 </p>
+ 
+	 <p id="FINALIZATION"><a name="FINALIZATION"><!-- --></a><strong>finalization</strong>: A process during which the 
+		Intel&reg; VTune&#8482; Amplifier converts the collected data to a database, resolves symbol information, and pre-computes data to make further analysis more efficient and responsive. 
+	 </p>
+ 
+	 <p id="HOTSPOT"><a name="HOTSPOT"><!-- --></a> 
+		<strong id="GUID-C7660F2E-336F-4BC3-A580-1A175646ACB5">hotspot</strong>: A section of code that took a long time to execute. Some hotspots may indicate bottlenecks and can be removed, while other hotspots inevitably take a long time to execute due to their nature. 
+	 </p>
+ 
+	 <p id="TARGET"><a name="TARGET"><!-- --></a> 
+		<strong id="GUID-5EAB21BB-5400-4754-A1A7-51D99CDB8A94">target</strong>: 
+		A 
+          <dfn class="term">target</dfn> is an executable file you analyze using the
+          Intel&reg; VTune&#8482; Amplifier. 
+	 </p>
+ 
+	 <p id="VIEWPOINT"><a name="VIEWPOINT"><!-- --></a> 
+		<strong id="GUID-1B5043B8-253D-4758-A765-3CDCD11AD26C">viewpoint</strong>: A preset result tab configuration that filters out the data collected during a performance analysis and enables you to focus on specific performance problems. When you select a viewpoint, you select a set of performance metrics the VTune Amplifier shows in the windows/panes of the result tab. To select the required viewpoint, click the 
+		<strong>(<u>change</u>) 
+		</strong>link at the top of the result tab and use the drop-down menu to select a required viewpoint. 
+	 </p>
+ 
+  </div>
+ 
+  
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong>&nbsp;<a href="GUID-703EC099-0C5C-4505-83DC-BF1854BFED41.htm">Tutorial: Identifying Hardware Issues</a></div>
+</div>
+<div><h2>See Also</h2>
+<div class="linklist">
+<div><a href="https://software.intel.com/en-us/articles/intel-vtune-amplifier-tutorials" target="_blank">Click here for more Getting Started Tutorials 
+		  </a></div></div></div> 
+
+</body>
+</html>
